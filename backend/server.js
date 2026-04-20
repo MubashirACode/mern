@@ -52,7 +52,7 @@ async function startServer() {
     app.use('/api/services', Servicesrouter);
     app.use('/api/orders', Orderrouter);
 
-    app.get('/api/health', (req, res) => {
+    app.get('/', (req, res) => {
         res.json({ status: 'ok', message: 'Server is running smoothly' });
     });
 
